@@ -1,0 +1,38 @@
+<div class="container">
+  <div class="row mt-5">
+    <div class="col-md-4 offset-4">
+
+      <div class="card bg-dark">
+        <div class="card-body text-center">
+
+          <div class="title">
+            <h2 class="text-white">Enter your age</h2>
+          </div>
+
+          <input type="number" id="myAge" placeholder="Number" class=".form-control mt-3 form-control-lg" [(ngModel)]="age" >
+          <form class="form-inline">
+            <div class="form-group">
+              <label for="myAge">Age</label>
+            </div>
+            <button type="submit" class="btn btn-success mt-3 btn-lg" (click)="checkAge()">Check</button>
+          </form>
+        </div>
+      </div>
+
+      <div *ngIf="adult == 1" class="alert alert-success text-center" role="alert">
+        <strong>You are of legal age</strong>
+      </div>
+
+      <div *ngIf="adult == 0" class="alert alert-danger text-center" role="alert">
+        <strong>You are underage</strong>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
